@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[PrincipalController::class, 'principal']);
+Route::get('/sobre-nos', [SobreNosController::class, 'sobreNos']);
+Route::get('/contato', [ContatoController::class, 'contato']);
+Route::get('/contato/{metodo}', [ContatoController::class, 'metodoContato'])->where('metodo', 'email|telefone');
