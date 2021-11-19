@@ -26,3 +26,5 @@ Route::prefix('site')->group(function(){ //it will have how first parameter this
 //Route::redirect('origin', 'to');
 
 //in callback function, we can use: return redirect()->route('routeName');
+
+//Route::fallback is the error redirect route.
